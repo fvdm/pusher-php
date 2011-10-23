@@ -13,14 +13,12 @@
 #  authSecret		your Pusher auth secret (API access tab)
 
 # optional:
-#  ssl			true: force HTTPS
 #  excludeSocketID	a client socket ID that must not be pushed
 
 function pusher( $settings )
 {
 	# basics
-	$url = !empty($settings['ssl']) ? 'https' : 'http';
-	$url .= '://api.pusherapp.com';
+	$url = 'https://api.pusherapp.com';
 	
 	$path = '/apps/'. $settings['appID'] .'/channels/'. $settings['channel'] .'/events';
 	$body = json_encode( $settings['fields'] );
