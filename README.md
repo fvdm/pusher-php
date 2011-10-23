@@ -5,6 +5,7 @@ At the moment there is only one file _pusher.php_ to send messages to your [Push
 Just require it and do like this:
 
 ```php
+<?php
 require 'pusher.php';
 pusher( array(
 	'appID'			=>	'1234',
