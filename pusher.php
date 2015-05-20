@@ -31,8 +31,7 @@ function pusher ($settings)
   );
 	
   # exclude a socket
-  if (!empty($settings['excludeSocketID']))
-  {
+  if (!empty($settings['excludeSocketID'])) {
     $vars['socket_id'] = $settings['excludeSocketID'];
   }
 	
@@ -70,8 +69,7 @@ function pusher ($settings)
   curl_close ($c);
 	
   # check
-  if ($info['http_code'] == 202)
-  {
+  if ($info['http_code'] == 202) {
     return $data;
   }
 	
